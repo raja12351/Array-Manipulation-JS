@@ -14,9 +14,19 @@ const data = [
   
   // 2. Add Data
   function addData() {
-    const newArr = { name:"susan", age:20, profession:"intern" };
-    data.push(newArr);
-    console.log(data);
+    const name = prompt("Enter the name");
+    const age = parseInt(prompt("Enter the age"));
+    const profession = prompt("Enter the profession");
+
+    if(name && !isNaN(age) && profession){
+      const newData = {name, age, profession};
+      data.push(newData);
+
+      console.log(data);
+    }
+    else{
+      console.log("Invalid data");
+    }
   }
   
   // 3. Remove Admins
